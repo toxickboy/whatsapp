@@ -1,0 +1,16 @@
+whatsapp_inbox/
+├── app/
+│   ├── main.py
+│   ├── config.py
+│   ├── models.py
+│   ├── schemas.py
+│   ├── routes/
+│   │   ├── webhook.py
+│   │   └── messages.py
+│   ├── services/
+│   │   ├── whatsapp.py
+│   │   └── inbox.py
+│   └── utils/
+│       └── logger.py
+├── .env
+└── requirements.txt
