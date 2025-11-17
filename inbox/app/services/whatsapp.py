@@ -1,8 +1,8 @@
 # inbox/app/services/whatsapp.py
 import requests
 from typing import Optional, Dict
-from app.config import WHATSAPP_ACCESS_TOKEN, WHATSAPP_PHONE_NUMBER_ID
-from app.utils.logger import logger
+from config import WHATSAPP_ACCESS_TOKEN, WHATSAPP_PHONE_NUMBER_ID
+from utils.logger import logger
 
 class WhatsAppService:
     def __init__(self):

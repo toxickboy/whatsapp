@@ -1,11 +1,16 @@
 # inbox/app/routes/messages.py
 from fastapi import APIRouter, HTTPException, Query
 from typing import List, Optional
-from app.model import Message
-from app.schemas import MessageOut, ConversationOut, SendMessageResponse
-from app.services.inbox import get_messages_by_user
-from app.services.whatsapp import whatsapp_service
-from app.utils.logger import logger
+from model import SendMessageRequest, MessageResponse, ConversationResponse
+from schemas import MessageOut, ConversationOut, SendMessageResponse
+from services.inbox import (
+    get_messages_by_user,
+    get_all_conversations,
+    search_messages,
+    save_outgoing_message
+)
+from services.whatsapp import whatsapp_service
+from utils.logger import logger
 
 router = APIRouter(prefix="/api", tags=["messages"])
 
