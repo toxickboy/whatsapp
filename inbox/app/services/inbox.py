@@ -1,9 +1,8 @@
 # app/services/inbox.py
-from app.database import db
+from app.db import db
 
 async def save_incoming_message(message: dict):
     await db.messages.insert_one(message)
-
 
 # app/services/inbox.py
 async def get_messages_by_user(user_id: str):

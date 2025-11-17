@@ -8,3 +8,19 @@ class Message(BaseModel):
     body: str
     timestamp: datetime
     status: Optional[str]
+
+class SendMessageRequest(BaseModel):
+    to: str
+    message: str
+
+class MessageResponse(BaseModel):
+    success: bool
+    message_id: Optional[str] = None
+    error: Optional[str] = None
+
+class ConversationResponse(BaseModel):
+    user_id: str
+    last_message: str
+    last_timestamp: datetime
+    unread_count: int = 0
+    total_messages: int = 0

@@ -1,8 +1,0 @@
-requests==2.31.0
-python-dotenv==1.0.0
-
-# Optional: For better CSV handling (included in standard library but can be upgraded)
-# csv is part of Python standard library
-
-# Optional: For data validation
-# pandas==2.1.3  # Uncomment if you need advanced CSV processing
